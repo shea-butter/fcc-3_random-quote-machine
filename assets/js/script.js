@@ -9,7 +9,7 @@ window.getQuote = function getQuote() { // create onclick function
 	quoteScript.requestId = Math.floor(Math.random() * 999999).toString(); // 'cache-buster'
 	quoteScript.type = `text/javascript`;
 	quoteScript.id = `quoteScript`;
-	quoteScript.src = `http://quotesondesign.com/wp-json/posts?requestId=${quoteScript.requestId}&filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=setQuote`;
+	quoteScript.src = `https://quotesondesign.com/wp-json/posts?requestId=${quoteScript.requestId}&filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=setQuote`;
 
 	document.getElementsByTagName(`head`)[0].appendChild(quoteScript); // append script element to head of document
 
