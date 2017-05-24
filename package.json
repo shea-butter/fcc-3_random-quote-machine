@@ -1,0 +1,23 @@
+{
+  "name": "fcc-3_random-quote-machine",
+  "version": "1.0.0",
+  "description": "A Random Quote Machine",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d /",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shea-butter/fcc-3_random-quote-machine.git"
+  },
+  "author": "Shea Fitzek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shea-butter/fcc-3_random-quote-machine/issues"
+  },
+  "homepage": "https:///shea-butter.github.io/fcc-3_random-quote-machine",
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}
