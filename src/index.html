@@ -2,79 +2,87 @@
 
 <html lang="en">
 
-<head>
+	<head>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Random Quote Machine</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Random Quote Machine</title>
 
-	<link type="text/css" rel="stylesheet" href="assets/css/normalize.css" />
+		<link type="text/css" rel="stylesheet" href="assets/css/normalize.css" />
 
-	<link type="text/css" rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet" />
-	<link href="https://unpkg.com/basscss-btn@1.1.0/css/btn.css" rel="stylesheet" />
-	<link href="https://unpkg.com/basscss-btn-outline@1.1.0/css/btn-outline.css" rel="stylesheet" />
+		<link type="text/css" rel="stylesheet" href="https://unpkg.com/basscss@8.0.2/css/basscss.min.css" rel="stylesheet" />
+		<link href="https://unpkg.com/basscss-btn@1.1.0/css/btn.css" rel="stylesheet" />
+		<link href="https://unpkg.com/basscss-btn-outline@1.1.0/css/btn-outline.css" rel="stylesheet" />
 
-	<link type="text/css" rel="stylesheet" href="assets/css/styles.css" />
+		<link type="text/css" rel="stylesheet" href="assets/css/styles.css" />
 
-	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt|Stint+Ultra+Expanded|Orbitron&effect=shadow-multiple|3d-float" />
+		<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt|Stint+Ultra+Expanded|Orbitron&effect=shadow-multiple|3d-float" />
 
-</head>
+	</head>
 
-<body>
+	<body>
 
-	<!--<div class="header">
+		<!--<div class="header">
 	</div>-->
 
-	<div class="page top-0 right-0 bottom-0 left-0">
+		<div class="page top-0 right-0 bottom-0 left-0">
 
-		<div class="nextQuote center right-0 left-0 block">
-			<button  class="btn btn-outline" onclick="getQuote()">Next Quote</button>
-		</div>
-
-		<div class="content center block">
-
-			<div class="quote-wrap clearfix">
-				<blockquote class="quote h1 left"></blockquote>
+			<div class="nextQuote center right-0 left-0 block">
+				<button class="btn btn-outline" onclick="getQuote()">Next Quote</button>
 			</div>
 
-			<div class="meta">
-				<p class="author h2"></p>
-				<p class="source h3 text-decoration-none ml3"></p>
+			<div class="content center block">
+
+				<div class="quote-wrap clearfix">
+					<blockquote class="quote h1 left"></blockquote>
+				</div>
+
+				<div class="meta">
+					<p class="author h2"></p>
+					<p class="source h3 text-decoration-none ml3"></p>
+				</div>
+
+			</div>
+
+			<div class="tweetQuote center block">
+				<button class="btn btn-outline" onclick="tweetQuote(finalTweet)">Tweet This</button>
 			</div>
 
 		</div>
 
-		<div class="tweetQuote center block">
-			<button class="btn btn-outline" onclick="tweetQuote()">Tweet This</button>
-		</div>
+		<footer class="center right-0 bottom-0 left-0">
+			<div id="social-logos" class="col-xs-12">
+				<ul class="list-reset">
+					<li id="github" class="inline-block h2 ml1 mr1"><a href="https://github.com/shea-butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-github fa-fw " aria-hidden="true "></i></a></li>
+					<li id="bitbucket" class="inline-block h2 ml1 mr1"><a href="https://bitbucket.org/shea_butter/" rel="noopener noreferrer" target="_blank"><i class="fa fa-bitbucket fa-fw " aria-hidden="true "></i></a></li>
+					<li id="codepen" class="inline-block h2 ml1 mr1"><a href="https://codepen.io/shea_butter/" rel="noopener noreferrer" target="_blank"><i class="fa fa-codepen fa-fw " aria-hidden="true "></i></a></li>
+					<li id="linkedin" class="inline-block h2 ml1 mr1"><a href="https://www.linkedin.com/in/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin fa-fw " aria-hidden="true "></i></a></li>
+					<li id="twitter" class="inline-block h2 ml1 mr1"><a href="https://twitter.com/SheaFitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter fa-fw " aria-hidden="true "></i></a></li>
+					<li id="facebook" class="inline-block h2 ml1 mr1"><a href="https://www.facebook.com/shea.fitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook fa-fw " aria-hidden="true "></i></a></li>
+					<li id="medium" class="inline-block h2 ml1 mr1"><a href="https://medium.com/@shea_butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-medium fa-fw " aria-hidden="true "></i></a></li>
+					<li id="meetup" class="inline-block h2 ml1 mr1"><a href="https://www.meetup.com/members/209350641/" rel="noopener noreferrer" target="_blank"><i class="fa fa-meetup fa-fw " aria-hidden="true "></i></a></li>
+					<li id="slack" class="inline-block h2 ml1 mr1"><a href="https://sheafitzek.slack.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-slack fa-fw " aria-hidden="true "></i></a></li>
+					<li id="trello" class="inline-block h2 ml1 mr1"><a href="https://trello.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-trello fa-fw " aria-hidden="true "></i></a></li>
+					<li id="free-code-camp" class="inline-block h2 ml1 mr1"><a href="https://www.freecodecamp.com/shea-butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-free-code-camp fa-fw " aria-hidden="true "></i></a></li>
+				</ul>
+			</div>
 
-	</div>
+			<p>© 2017 Shea Fitzek - All Rights Reserved | <span class="info" onclick="openModal()">page info</span></p>
 
-	<footer class="center right-0 bottom-0 left-0">
-		<div id="social-logos" class="col-xs-12">
-			<ul class="list-reset">
-				<li id="github" class="inline-block h2 ml1 mr1"><a href="https://github.com/shea-butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-github fa-fw " aria-hidden="true "></i></a></li>
-				<li id="bitbucket" class="inline-block h2 ml1 mr1"><a href="https://bitbucket.org/shea_butter/" rel="noopener noreferrer" target="_blank"><i class="fa fa-bitbucket fa-fw " aria-hidden="true "></i></a></li>
-				<li id="codepen" class="inline-block h2 ml1 mr1"><a href="https://codepen.io/shea_butter/" rel="noopener noreferrer" target="_blank"><i class="fa fa-codepen fa-fw " aria-hidden="true "></i></a></li>
-				<li id="llinkedin" class="inline-block h2 ml1 mr1"><a href="https://www.linkedin.com/in/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-linkedin fa-fw " aria-hidden="true "></i></a></li>
-				<li id="twitter" class="inline-block h2 ml1 mr1"><a href="https://twitter.com/SheaFitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-twitter fa-fw " aria-hidden="true "></i></a></li>
-				<li id="facebook" class="inline-block h2 ml1 mr1"><a href="https://www.facebook.com/shea.fitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-facebook fa-fw " aria-hidden="true "></i></a></li>
-				<li id="medium" class="inline-block h2 ml1 mr1"><a href="https://medium.com/@shea_butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-medium fa-fw " aria-hidden="true "></i></a></li>
-				<li id="meetup" class="inline-block h2 ml1 mr1"><a href="https://www.meetup.com/members/209350641/" rel="noopener noreferrer" target="_blank"><i class="fa fa-meetup fa-fw " aria-hidden="true "></i></a></li>
-				<li id="slack" class="inline-block h2 ml1 mr1"><a href="https://sheafitzek.slack.com" rel="noopener noreferrer" target="_blank"><i class="fa fa-slack fa-fw " aria-hidden="true "></i></a></li>
-				<li id="trello" class="inline-block h2 ml1 mr1"><a href="https://trello.com/sheafitzek" rel="noopener noreferrer" target="_blank"><i class="fa fa-trello fa-fw " aria-hidden="true "></i></a></li>
-				<li id="free-code-camp" class="inline-block h2 ml1 mr1"><a href="https://www.freecodecamp.com/shea-butter" rel="noopener noreferrer" target="_blank"><i class="fa fa-free-code-camp fa-fw " aria-hidden="true "></i></a></li>
-			</ul>
-		</div>
-		<p>© 2017 Shea Fitzek - All Rights Reserved | page info</p>
-	</footer>
+			<div class="modal" onclick="closeModal()">
+				<div class="modal-content">
+					<span class="close" onclick="closeModal()">&times;</span>
+					<p class="h2">This was coded as part of the FreeCodeCamp curriculum</p>
+					<p class="h2">All quotes delivered by the <a href="https://quotesondesign.com/" rel="noopener noreferrer" target="_blank">Quotes on Design</a> API</p>
+				</div>
+			</div>
 
-	<script src='assets/js/encoder.js'></script>
-	<script src='assets/js/script.js'></script>
+		</footer>
 
-</body>
+		<script src='assets/js/encoder.js'></script>
+		<script src='assets/js/script.js'></script>
+
+	</body>
 
 </html>
-
-

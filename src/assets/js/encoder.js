@@ -241,5 +241,3 @@ var Encoder = {
 	}
 
 }
-
-export { Encoder };
