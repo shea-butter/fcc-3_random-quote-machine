@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shea-butter/fcc-3_random-quote-machine.git"
+    "url": "git+https://github.com/sheafitzek/fcc-3_random-quote-machine.git"
   },
   "author": "Shea Fitzek",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shea-butter/fcc-3_random-quote-machine/issues"
+    "url": "https://github.com/sheafitzek/fcc-3_random-quote-machine/issues"
   },
   "homepage": "https:///sheafitzek.github.io/fcc-3_random-quote-machine",
   "devDependencies": {
